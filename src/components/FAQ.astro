@@ -1,0 +1,117 @@
+---
+const faqs = [
+  {
+    q: "Do I need any prior experience to start?",
+    a: "No prior experience is necessary! Our fundamentals classes are designed specifically for beginners. You will learn foundational positions, escapes, and basic techniques step-by-step in a safe, controlled environment."
+  },
+  {
+    q: "What should I wear to my first class?",
+    a: "For your first class, wear comfortable athletic apparel like a fitted t-shirt or rashguard and shorts or athletic leggings without zippers or metal snaps. Bring a bottle of water, and we'll take care of the rest!"
+  },
+  {
+    q: "Am I too old or out of shape to start Jiu Jitsu?",
+    a: "Absolutely not! Jiu Jitsu is designed to give leverage to smaller or less athletic individuals against larger opponents. Students of all ages, sizes, and fitness levels train with us daily. You will build strength, stamina, and agility at your own comfortable pace."
+  },
+  {
+    q: "Do I have to compete?",
+    a: "No, competition is completely optional! While we train world-champion competitors, many of our members train purely for physical fitness, self-defense, mental focus, and community."
+  },
+  {
+    q: "How often should I train?",
+    a: "For beginners, we recommend training 2 to 3 times per week. This provides enough repetition for muscle memory while giving your body plenty of time to rest and recover between sessions."
+  }
+];
+---
+
+<section id="faq" class="py-20 bg-slate-50 border-t border-slate-200/60">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-3xl">
+    
+    <!-- Section Header -->
+    <div class="text-center mb-14">
+      <span class="text-rose-600 font-bold uppercase tracking-wider text-sm block mb-2">
+        Common Questions
+      </span>
+      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-heading font-extrabold tracking-tight uppercase text-slate-900">
+        Frequently Asked Questions
+      </h2>
+      <p class="mt-4 text-lg text-slate-600">
+        Everything you need to know before stepping on the mats.
+      </p>
+    </div>
+
+    <!-- Accordion Container -->
+    <div class="space-y-4">
+      {faqs.map((faq, index) => (
+        <div class="accordion-item bg-white border border-slate-200 rounded-2xl shadow-sm overflow-hidden transition-all duration-200">
+          <button 
+            type="button" 
+            class="accordion-toggle w-full px-6 py-5 text-left flex items-center justify-between font-bold text-slate-900 text-lg hover:text-rose-600 transition-colors cursor-pointer"
+            aria-expanded="false"
+          >
+            <span>{faq.q}</span>
+            <svg 
+              class="chevron-icon h-5 w-5 text-slate-400 shrink-0 transition-transform duration-300 ml-4" 
+              fill="none" 
+              stroke="currentColor" 
+              viewBox="0 0 24 24"
+            >
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+          
+          <div class="accordion-content px-6">
+            <p class="text-slate-600 text-base leading-relaxed pb-6 pt-1 border-t border-slate-100">
+              {faq.a}
+            </p>
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <!-- CTA Button -->
+    <div class="mt-14 text-center">
+      <button 
+        type="button" 
+        class="open-modal-btn btn-primary h-14 px-10 text-lg font-extrabold uppercase tracking-wider rounded-none shadow-xl cursor-pointer"
+      >
+        Book Your Free Class
+      </button>
+    </div>
+
+  </div>
+</section>
+
+<!-- Accordion JS Script -->
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const accordionItems = document.querySelectorAll('.accordion-item');
+
+    accordionItems.forEach((item) => {
+      const toggle = item.querySelector('.accordion-toggle');
+
+      if (toggle) {
+        toggle.addEventListener('click', () => {
+          const isActive = item.classList.contains('active');
+
+          // Close all other accordion items
+          accordionItems.forEach((otherItem) => {
+            if (otherItem !== item) {
+              otherItem.classList.remove('active');
+              const otherToggle = otherItem.querySelector('.accordion-toggle');
+              if (otherToggle) otherToggle.setAttribute('aria-expanded', 'false');
+            }
+          });
+
+          // Toggle current item
+          if (isActive) {
+            item.classList.remove('active');
+            toggle.setAttribute('aria-expanded', 'false');
+          } else {
+            item.classList.add('active');
+            toggle.setAttribute('aria-expanded', 'true');
+          }
+        });
+      }
+    });
+  });
+</script>

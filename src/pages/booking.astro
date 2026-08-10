@@ -1,0 +1,46 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout 
+  title="Book Your Class | Assembly Jiu Jitsu Bloomfield"
+  description="Select a date and time that works for your first Brazilian Jiu-Jitsu class at Assembly Jiu Jitsu in Bloomfield Township, MI."
+>
+  <Header />
+
+  <!-- Booking Main Section -->
+  <section class="py-12 md:py-20 bg-slate-50 min-h-[85vh] text-slate-900 flex flex-col justify-center">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header Matching User's Screenshot -->
+      <div class="text-center max-w-2xl mx-auto mb-8 sm:mb-10">
+        <h1 class="text-3xl sm:text-4xl md:text-5xl font-heading font-extrabold uppercase tracking-tight text-slate-900 mb-3">
+          BOOK YOUR CLASS
+        </h1>
+        <p class="text-base sm:text-lg text-slate-600 font-normal leading-relaxed">
+          Select a time that works for you. We'll provide everything you need for your first session.
+        </p>
+      </div>
+
+      <!-- Calendar Container Card Matching User's Screenshot -->
+      <div class="max-w-4xl mx-auto bg-white rounded-2xl p-4 sm:p-8 shadow-xl border border-slate-200/80 overflow-hidden min-h-[650px]">
+        <iframe 
+          src="https://link.assembly-detroit.com/widget/group/YVOUBQCUod3CCCRX3iLU" 
+          allow="payment" 
+          style="width: 100%; border: none; overflow: auto; min-height: 650px;" 
+          scrolling="yes" 
+          id="YVOUBQCUod3CCCRX3iLU_1785703334560"
+          title="Book Your Class Calendar Widget"
+        ></iframe>
+      </div>
+
+    </div>
+  </section>
+
+  <Footer />
+
+  <!-- HighLevel Form/Widget Embed Script -->
+  <script src="https://link.assembly-detroit.com/js/form_embed.js" type="text/javascript"></script>
+</Layout>

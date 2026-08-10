@@ -1,0 +1,19 @@
+# dependencies
+node_modules/
+
+# build output
+dist/
+.astro/
+
+# Google Ads credentials & audit logs
+google-ads.yaml
+*.yaml
+audit_results_bloomfield.json
+search_terms_30d.json
+waste_analysis_results.json
+*.py
+
+# logs & env
+*.log
+.env
+.DS_Store

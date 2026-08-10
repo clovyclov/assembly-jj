@@ -1,0 +1,153 @@
+---
+const reviews = [
+  {
+    name: "Zachary John",
+    rating: 5,
+    text: "From the moment I walked through the doors, I knew I had found something special. This jiu-jitsu academy strikes a rare and perfect balance: a welcoming, family-like atmosphere with an undeniable intensity and professionalism that pushes you to grow, whether you're a complete beginner or an experienced competitor."
+  },
+  {
+    name: "Andrew Barbara",
+    rating: 5,
+    text: "One of the cleanest and most well-maintained facilities in the world of martial arts/grappling. World class talent and day one hobbyists share the mats every day, and the health and size of the family speaks volumes. It's a pleasure every day I'm able to train at this school."
+  },
+  {
+    name: "Mo Sitto",
+    rating: 5,
+    text: "As iron sharpens iron so one person sharpens another... That's my outlook on assembly every time I step on those mats I absolutely love this place from Coach David Garmo and his crew are unbelievable. Every one of those coaches there are amazing. COME CHECK THEM OUT."
+  },
+  {
+    name: "Yvonne Tamou",
+    rating: 5,
+    text: "My boys love coming here. They do warmups with them prior to starting to learn the moves. My 2 boys (5 and 7) love coming. They offer classes for their age m/w/sat. The ratio of teachers to students is high with teachers very attentive to the students. The area is clean and well maintained."
+  },
+  {
+    name: "Jessica Siffring",
+    rating: 5,
+    text: "Wonderful place to train Jiu jitsu. The people are amazing, kind and competitive. As a female, I feel so respected and safe in this space. Hands down, I recommend this place to any lady who wants to learn how to protect herself. The coaches are top notch."
+  },
+  {
+    name: "Ryan Holman",
+    rating: 5,
+    text: "I dropped in from out of state and chose this gym based on the clean looking facility and high level coaching. The experience was great. Coach Josh is a stud and his instruction was excellent. The vibe here is great. There is a ton of talent in the room, but everyone was respectful."
+  },
+  {
+    name: "Stephanie Elliott",
+    rating: 5,
+    text: "The facility is clean and orderly. Everyone that we have met or encountered there has been nothing but friendly and welcoming. My two young daughters, myself and my husband all train here. Even if we take a break from training, it feels like home walking back through the doors."
+  },
+  {
+    name: "Andre",
+    rating: 5,
+    text: "I recently joined this jiu jitsu gym and I couldn't be happier with my decision. From the moment I walked in, I was greeted with warmth and enthusiasm. The professors here are top-notch, with a wealth of knowledge and experience that they eagerly share with their students."
+  },
+  {
+    name: "Matthew Schmitz",
+    rating: 5,
+    text: "The reception area is a great mix of professional and welcoming. It always smells good in there. Love the honor-system grab your own drink! Changing room and showers are great. Huge mat! Awesome training area (weights, pull ups, etc.) in the back."
+  },
+  {
+    name: "Firas Zako",
+    rating: 5,
+    text: "Came to town to visit family. David and his team were very welcoming. The caliber of training was very high. Highly recommend for anyone looking to level up their game. Definitely coming back next time I visit."
+  }
+];
+
+// Duplicate for seamless infinite loop
+const doubleReviews = [...reviews, ...reviews];
+---
+
+<section id="reviews" class="py-20 bg-white text-slate-900 overflow-hidden">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
+    
+    <!-- Header & Official Google 5-Star Badge -->
+    <div class="text-center max-w-3xl mx-auto mb-14">
+      <div class="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-slate-50 border border-slate-200 text-slate-900 mb-4 font-bold text-sm shadow-sm">
+        <!-- Official Google G Icon -->
+        <svg class="w-5 h-5 shrink-0" viewBox="0 0 24 24">
+          <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+          <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+          <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"/>
+          <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/>
+        </svg>
+
+        <div class="flex gap-1 text-amber-400">
+          {Array.from({ length: 5 }).map(() => (
+            <svg class="w-4 h-4 fill-amber-400" viewBox="0 0 24 24">
+              <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+            </svg>
+          ))}
+        </div>
+        <span>5.0 Rating • 120+ Verified Google Reviews</span>
+      </div>
+
+      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-heading font-extrabold tracking-tight uppercase text-slate-900">
+        What Our Students Say
+      </h2>
+      <p class="mt-4 text-lg text-slate-600 leading-relaxed">
+        Don't just take our word for it. Hear from real students and parents who train at Assembly Jiu Jitsu Bloomfield.
+      </p>
+    </div>
+
+  </div>
+
+  <!-- Infinite Marquee Slider Container -->
+  <div class="relative w-full overflow-hidden group">
+    <!-- Subtle Gradient Fade Masks on sides -->
+    <div class="absolute left-0 top-0 bottom-0 w-12 sm:w-28 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none"></div>
+    <div class="absolute right-0 top-0 bottom-0 w-12 sm:w-28 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none"></div>
+
+    <!-- Animated Track -->
+    <div class="flex gap-6 w-max animate-marquee py-4">
+      {doubleReviews.map((review, index) => (
+        <div class="shrink-0 w-[300px] sm:w-[360px] rounded-2xl bg-slate-50 p-7 shadow-sm border border-slate-200/80 flex flex-col justify-between hover:shadow-md transition-shadow">
+          <div>
+            <!-- Header with Stars & Google Logo -->
+            <div class="flex items-center justify-between mb-4">
+              <div class="flex gap-1 text-amber-400">
+                {Array.from({ length: review.rating }).map(() => (
+                  <svg class="w-4 h-4 fill-amber-400" viewBox="0 0 24 24">
+                    <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                  </svg>
+                ))}
+              </div>
+
+              <!-- Google Icon -->
+              <svg class="w-4 h-4 shrink-0" viewBox="0 0 24 24">
+                <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+                <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+                <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"/>
+                <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/>
+              </svg>
+            </div>
+
+            <!-- Fixed Height Truncated Quote Text -->
+            <p class="text-slate-700 italic leading-relaxed text-xs sm:text-sm mb-6 line-clamp-6">
+              "{review.text}"
+            </p>
+          </div>
+
+          <!-- Author Info -->
+          <div class="border-t border-slate-200 pt-4 mt-auto">
+            <p class="font-bold text-slate-900 text-sm leading-tight truncate">{review.name}</p>
+            <p class="text-xs text-slate-500 font-medium">Google Review</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  @keyframes marquee {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  .animate-marquee {
+    animation: marquee 45s linear infinite;
+  }
+</style>
