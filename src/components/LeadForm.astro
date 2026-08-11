@@ -180,6 +180,14 @@ const {
     const formLabel = isKidsForm ? 'Kids Form' : 'Adult Form';
     const sourcePage = isKidsPage ? 'Kids Class Landing Page' : 'Adult Class Landing Page';
 
+    // Push dataLayer event for GTM & Google Ads Conversion Tracking
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({
+      'event': 'generate_lead',
+      'lead_type': formLabel,
+      'source_page': sourcePage
+    });
+
     const payload = JSON.stringify({
       full_name: data.fullName || '',
       first_name: data.fullName ? data.fullName.split(' ')[0] : '',

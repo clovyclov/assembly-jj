@@ -10,6 +10,7 @@ google-ads.yaml
 *.yaml
 audit_results_bloomfield.json
 search_terms_30d.json
+search_terms_45d.json
 waste_analysis_results.json
 *.py
 

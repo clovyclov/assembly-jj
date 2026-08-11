@@ -107,4 +107,12 @@ import Footer from '../components/Footer.astro';
   </section>
 
   <Footer />
+
+  <script is:inline>
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({
+      'event': 'booking_completed',
+      'page_location': window.location.href
+    });
+  </script>
 </Layout>
