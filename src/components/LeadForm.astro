@@ -180,12 +180,23 @@ const {
     const formLabel = isKidsForm ? 'Kids Form' : 'Adult Form';
     const sourcePage = isKidsPage ? 'Kids Class Landing Page' : 'Adult Class Landing Page';
 
-    // Push dataLayer event for GTM & Google Ads Conversion Tracking
+    const firstName = data.fullName ? data.fullName.split(' ')[0] : '';
+    const lastName = data.fullName ? data.fullName.split(' ').slice(1).join(' ') : '';
+
+    // Push dataLayer event for GTM & Google Ads Enhanced Conversions
     window.dataLayer = window.dataLayer || [];
     window.dataLayer.push({
       'event': 'generate_lead',
       'lead_type': formLabel,
-      'source_page': sourcePage
+      'source_page': sourcePage,
+      'user_data': {
+        'email': data.email || '',
+        'phone_number': data.phone || '',
+        'address': {
+          'first_name': firstName,
+          'last_name': lastName
+        }
+      }
     });
 
     const payload = JSON.stringify({
