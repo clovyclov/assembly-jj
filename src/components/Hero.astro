@@ -40,9 +40,31 @@ import LeadForm from './LeadForm.astro';
           LEARN SELF-DEFENSE FAST WITH JIU-JITSU
         </h1>
 
-        <p class="text-base sm:text-xl text-gray-200 font-normal leading-relaxed mb-8">
+        <p class="text-base sm:text-xl text-gray-200 font-normal leading-relaxed mb-6">
           A fun, welcoming environment perfect for beginners and experienced grapplers alike. Train with champion black belts and transform your life.
         </p>
+
+        <!-- CTA Buttons -->
+        <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 mb-8">
+          <button 
+            type="button" 
+            class="open-modal-btn btn-primary h-12 sm:h-14 px-6 sm:px-8 text-sm sm:text-base font-extrabold uppercase tracking-wider cursor-pointer"
+          >
+            Claim Free Pass
+          </button>
+          <a 
+            href="#schedule" 
+            class="h-12 sm:h-14 px-6 sm:px-8 bg-white/10 hover:bg-white/20 text-white font-extrabold text-xs sm:text-sm uppercase tracking-wider border-2 border-white/40 hover:border-white rounded-lg transition-all inline-flex items-center justify-center gap-2 backdrop-blur-sm"
+          >
+            <svg class="w-4 h-4 text-rose-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <rect x="3" y="4" width="18" height="18" rx="2" ry="2" stroke-width="2" />
+              <line x1="16" y1="2" x2="16" y2="6" stroke-width="2" stroke-linecap="round" />
+              <line x1="8" y1="2" x2="8" y2="6" stroke-width="2" stroke-linecap="round" />
+              <line x1="3" y1="10" x2="21" y2="10" stroke-width="2" />
+            </svg>
+            <span>View Class Schedule</span>
+          </a>
+        </div>
 
         <!-- Highlights -->
         <div class="grid grid-cols-2 gap-4 text-xs sm:text-sm font-semibold text-gray-300 border-t border-white/15 pt-6">
