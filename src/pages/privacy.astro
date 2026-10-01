@@ -1,0 +1,139 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import BookingModal from '../components/BookingModal.astro';
+---
+
+<Layout 
+  title="Privacy Policy | Assembly Jiu Jitsu Bloomfield Township" 
+  description="Privacy Policy for Assembly Jiu Jitsu. Learn how we collect, use, and protect your personal information and SMS communication preferences."
+>
+  <Header />
+
+  <main class="bg-slate-900 text-slate-100 py-12 sm:py-20">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
+      
+      <!-- Header / Title -->
+      <div class="mb-10 text-center sm:text-left border-b border-slate-800 pb-8">
+        <span class="text-rose-500 font-extrabold uppercase text-xs sm:text-sm tracking-widest block mb-2">
+          Legal & Compliance
+        </span>
+        <h1 class="text-3xl sm:text-5xl font-heading font-extrabold tracking-tight uppercase text-white mb-4">
+          Privacy Policy
+        </h1>
+        <p class="text-slate-400 text-xs sm:text-sm">
+          Last Updated: {new Date().toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}
+        </p>
+      </div>
+
+      <!-- Policy Content -->
+      <div class="space-y-8 text-slate-300 text-sm sm:text-base leading-relaxed">
+        
+        <!-- Section 1 -->
+        <section class="bg-slate-800/60 rounded-2xl border border-slate-700/60 p-6 sm:p-8">
+          <h2 class="text-xl sm:text-2xl font-bold text-white mb-4">1. Introduction</h2>
+          <p class="mb-3">
+            Assembly Jiu Jitsu ("we," "our," or "us"), located at 281 Enterprise Ct Suite 400, Bloomfield Township, MI 48302, respects your privacy and is committed to protecting the personal information you share with us through our website (<a href="https://go.assembly-detroit.com" class="text-rose-400 hover:underline">go.assembly-detroit.com</a>) and communication channels.
+          </p>
+          <p>
+            This Privacy Policy outlines how we collect, use, disclose, and safeguard your personal information when you visit our website, submit a form, or communicate with our team.
+          </p>
+        </section>
+
+        <!-- Section 2 -->
+        <section class="bg-slate-800/60 rounded-2xl border border-slate-700/60 p-6 sm:p-8">
+          <h2 class="text-xl sm:text-2xl font-bold text-white mb-4">2. Information We Collect</h2>
+          <p class="mb-4">We collect information that you voluntarily provide to us when claiming a free class pass, scheduling an appointment, or contacting us:</p>
+          <ul class="list-disc pl-6 space-y-2 text-slate-300">
+            <li><strong class="text-white">Contact Data:</strong> Full name, email address, and phone number.</li>
+            <li><strong class="text-white">Program Preferences:</strong> Age range and target audience (e.g., Adults BJJ, Kids Martial Arts).</li>
+            <li><strong class="text-white">Automated Data:</strong> IP address, browser type, operating system, and website usage data collected via cookies and analytics pixels (Google Analytics, Meta Pixel).</li>
+          </ul>
+        </section>
+
+        <!-- Section 3 -->
+        <section class="bg-slate-800/60 rounded-2xl border border-slate-700/60 p-6 sm:p-8">
+          <h2 class="text-xl sm:text-2xl font-bold text-white mb-4">3. How We Use Your Information</h2>
+          <p class="mb-4">We use the personal information collected for the following purposes:</p>
+          <ul class="list-disc pl-6 space-y-2 text-slate-300">
+            <li>To process your request for a free trial class or schedule an appointment.</li>
+            <li>To send confirmation messages, schedule updates, and appointment reminders via SMS, phone, or email.</li>
+            <li>To provide customer support and answer inquiries regarding our programs and location.</li>
+            <li>To optimize our website, advertising performance, and user experience.</li>
+          </ul>
+        </section>
+
+        <!-- Section 4 (SMS / A2P Compliance) -->
+        <section class="bg-slate-800/90 rounded-2xl border border-rose-500/40 p-6 sm:p-8 shadow-xl">
+          <div class="flex items-center gap-3 mb-4">
+            <svg class="w-6 h-6 text-rose-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
+            </svg>
+            <h2 class="text-xl sm:text-2xl font-bold text-white">4. SMS Messaging & Mobile Privacy Policy</h2>
+          </div>
+          <p class="mb-4 font-semibold text-rose-300">
+            Assembly Jiu Jitsu strictly adheres to A2P 10DLC mobile messaging compliance guidelines:
+          </p>
+          <div class="bg-slate-900/80 rounded-xl p-4 sm:p-5 border border-slate-700 space-y-3 mb-4 text-xs sm:text-sm">
+            <p class="font-bold text-white">
+              🔒 Mobile Information Privacy Protection:
+            </p>
+            <p class="text-slate-300 italic">
+              "No mobile information will be shared with third parties/affiliates for marketing/promotional purposes. All the above categories exclude text messaging originator opt-in data and consent; this information will not be shared with any third parties."
+            </p>
+          </div>
+          <ul class="list-disc pl-6 space-y-2 text-slate-300">
+            <li><strong class="text-white">Opt-In Consent:</strong> By providing your phone number on our forms, you explicitly consent to receive transactional and marketing text messages from Assembly Jiu Jitsu. Message and data rates may apply. Message frequency varies.</li>
+            <li><strong class="text-white">Opt-Out Instructions:</strong> You may opt out of SMS communications at any time by replying <code class="bg-slate-700 px-2 py-0.5 rounded text-rose-400 font-mono">STOP</code> to any text message received. For help, reply <code class="bg-slate-700 px-2 py-0.5 rounded text-rose-400 font-mono">HELP</code> or call us at (248) 413-8386.</li>
+          </ul>
+        </section>
+
+        <!-- Section 5 -->
+        <section class="bg-slate-800/60 rounded-2xl border border-slate-700/60 p-6 sm:p-8">
+          <h2 class="text-xl sm:text-2xl font-bold text-white mb-4">5. Data Sharing & Third Parties</h2>
+          <p class="mb-3">
+            We do not sell, rent, or trade your personal information. We only share necessary data with trusted service providers who assist us in operating our website, conducting our business, or serving our students (such as customer management platforms and web hosting services), provided those parties agree to keep this information confidential.
+          </p>
+        </section>
+
+        <!-- Section 6 -->
+        <section class="bg-slate-800/60 rounded-2xl border border-slate-700/60 p-6 sm:p-8">
+          <h2 class="text-xl sm:text-2xl font-bold text-white mb-4">6. Data Security</h2>
+          <p>
+            We implement appropriate technical and organizational security measures to protect your personal data against unauthorized access, alteration, disclosure, or destruction.
+          </p>
+        </section>
+
+        <!-- Section 7 -->
+        <section class="bg-slate-800/60 rounded-2xl border border-slate-700/60 p-6 sm:p-8">
+          <h2 class="text-xl sm:text-2xl font-bold text-white mb-4">7. Contact Us</h2>
+          <p class="mb-4">
+            If you have questions regarding this Privacy Policy, wish to update your information, or request deletion of your data, please contact us:
+          </p>
+          <div class="bg-slate-900/80 p-4 sm:p-5 rounded-xl border border-slate-700 space-y-2 text-slate-300 text-xs sm:text-sm">
+            <p class="font-bold text-white text-base">Assembly Jiu Jitsu</p>
+            <p>📍 281 Enterprise Ct Suite 400, Bloomfield Township, MI 48302</p>
+            <p>📞 Phone: <a href="tel:2484138386" class="text-rose-400 hover:underline">(248) 413-8386</a></p>
+            <p>🌐 Website: <a href="https://go.assembly-detroit.com" class="text-rose-400 hover:underline">go.assembly-detroit.com</a></p>
+          </div>
+        </section>
+
+      </div>
+
+      <!-- Back to Home Button -->
+      <div class="mt-12 text-center">
+        <a 
+          href="/" 
+          class="inline-flex items-center gap-2 btn-primary h-12 px-8 text-sm font-extrabold uppercase tracking-wider"
+        >
+          ← Return to Home
+        </a>
+      </div>
+
+    </div>
+  </main>
+
+  <Footer />
+  <BookingModal />
+</Layout>
